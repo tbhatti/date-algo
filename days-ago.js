@@ -45,20 +45,20 @@ function timeAgo(date) {
                     break;
 
                     case diff < YEAR:
-                        num = Math.round(diff / DAY);
-                        unit = 'day';
+                        num = Math.round(diff / MONTH);
+                        unit = 'month';
                         plural = num > 1;
                     break;
 
                     case diff < DECADE:
-                        num = Math.round(diff / DAY);
-                        unit = 'day';
+                        num = Math.round(diff / YEAR);
+                        unit = 'year';
                         plural = num > 1;
                     break;
 
                     default:
-                        num = Math.round(diff / DAY);
-                        unit = 'day';
+                        num = Math.round(diff / YEAR);
+                        unit = 'year';
                         plural = num > 1;
                 }
 
