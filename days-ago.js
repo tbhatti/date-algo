@@ -86,3 +86,40 @@ function timeAgo(date) {
         console.log(timeAgo(new Date('May 28 2017 13:12:19')));
         console.log(timeAgo(new Date('May 28 2000 13:12:19')));
         console.log(timeAgo(new Date('Sep 10 1994 13:12:19')));
+================================================================================
+Second Approach
+=================================================================================
+function timeAgo(date) {
+		var ms = (new Date()).getTime() - date.getTime();
+    var seconds = Math.floor(ms/1000);
+    var minutes = Math.floor(seconds/60);
+    var hours = Math.floor(minutes/60);
+    var days = Math.floor(hours/24);
+    var months = Math.floor(days/30);
+    var years = Math.floor(months/12);
+    
+    if(ms === 0) {
+    	return 'Just now';
+    } if(seconds < 60) {
+    	return seconds + ' seconds Ago';
+    } if(minutes < 60) {
+    	return minutes + ' minutes Ago';
+    } if(hours < 24) {
+    	return hours + ' hours Ago';
+    } if(days < 30)  {
+    	return days + ' days Ago';
+    } if(months < 12)  {
+    	return months + ' months Ago';
+    } else {
+    		return years + ' years Ago';
+    }
+            
+}
+
+        console.log(timeAgo(new Date()));
+        console.log(timeAgo(new Date('Jun 27 2020 10:12:19')));
+        console.log(timeAgo(new Date('Jun 27 2020 00:12:19')));
+        console.log(timeAgo(new Date('May 28 2020 13:12:19')));
+        console.log(timeAgo(new Date('May 28 2017 13:12:19')));
+        console.log(timeAgo(new Date('May 28 2000 13:12:19')));
+        console.log(timeAgo(new Date('Sep 10 1994 13:12:19')));
