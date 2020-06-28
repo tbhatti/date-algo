@@ -59,26 +59,29 @@ if(date1.getUTCDate() === date2.getUTCDate() && date1.getUTCMonth() === date2.ge
 }
 ```
 2. Consult Question 2
-=========================================================================================================
-Question 6: How to convert UTC date time into local date time using JavaScript ?
-=========================================================================================================
-Answer: 
+
+### Question 6: How to convert UTC date time into local date time using JavaScript ?
+### Answer
+```bash 
 var theDate = new Date(Date.parse('06/14/2020 4:41:48 PM UTC'))
 theDate.toLocaleString()
-=========================================================================================================
-Question 7: How to check if the given date is weekend?
-=========================================================================================================
-Answer: Use .getDay() method on the Date object to get the day.
+```
+
+### Question 7: How to check if the given date is weekend?
+### Answer
+```bash
+Use .getDay() method on the Date object to get the day.
 Check if it is 6 or not (6 denotes Saturday).
 Mon: 1
 Tue: 2
 ..
 Sat: 6
 Sun: 0
-=========================================================================================================
-Question 8: How to format current date in MM/DD/YYYY HH:MM:SS format using JavaScript ?
-=========================================================================================================
-Answer:
+```
+
+### Question 8: How to format current date in MM/DD/YYYY HH:MM:SS format using JavaScript ?
+### Answer
+```bash
    function gfg_Run() { 
             var Str = 
                 ("00" + (date.getMonth() + 1)).slice(-2) // slice(-2) means if "hello" it will take last two
@@ -90,19 +93,20 @@ Answer:
                   
             console.log(Str);
         }
+```
 
-=========================================================================================================
-Question 9: How to convert date to another timezone in JavaScript ?
-=========================================================================================================
-Answer: let date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0)); 
-              
-            console.log('Given IST datetime: ' + date); 
-			date.toLocaleString("en-US", {timeZone: "America/New_York"});
-			
-=========================================================================================================
-Question 10: How to check if date is less than 1 hour ago using JavaScript ?
-=========================================================================================================
-Answer:
+### Question 9: How to convert date to another timezone in JavaScript ?
+
+### Answer
+```bash
+let date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0)); 
+console.log('Given IST datetime: ' + date); 
+date.toLocaleString("en-US", {timeZone: "America/New_York"});
+```			
+
+### Question 10: How to check if date is less than 1 hour ago using JavaScript ?
+
+### Answer
 var date = new Date("2020-06-27 16:10:10");
 var now = new Date();
 var diffInMS = now - date;
