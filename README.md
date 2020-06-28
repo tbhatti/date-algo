@@ -26,33 +26,38 @@ if(today.setHours(0,0,0,0) === givenDate.setHours(0,0,0,0)) {
 	console.log('Date is todays date');
 } else {
 	console.log('Date is not todays date');
-} ```
-======================================================================================================
-Question 3: How to get seconds since epoch in JavaScript?
-=======================================================================================================
-Answer: EPOCH means time from 01 January 1970
+} 
+```
 
-var date = new Date();
+### Question 3: How to get seconds since epoch in JavaScript?
+
+### Answer
+EPOCH means time from 01 January 1970
+
+```bash var date = new Date();
 var ms = date.getTime() // It will return the number of milliseconds from 01 Jaunary 1970
 var seconds = ms/1000; // It will convert milliseconds to seconds
-=======================================================================================================
-Question 4: Get the relative timestamp difference between dates in JavaScript
-=======================================================================================================
-Answer: Please have a look at https://github.com/tbhatti/date-algo/blob/master/days-ago.js
+```
 
-========================================================================================================
-Question 5: How to check for two timestamp for the same day?
-=========================================================================================================
-Answer:
+### Question 4: Get the relative timestamp difference between dates in JavaScript
+### Answer
+
+```bash Please have a look at https://github.com/tbhatti/date-algo/blob/master/days-ago.js
+```
+
+
+### Question 5: How to check for two timestamp for the same day?
+### Answer
 There are two ways to do this
 1. by comparing UTCDate, UTCMonth and UTCFullYear as follows
-var date1 = new Date('2020-06-27');
+```bash var date1 = new Date('2020-06-27');
 var date2 = new Date('2020-06-26');
 if(date1.getUTCDate() === date2.getUTCDate() && date1.getUTCMonth() === date2.getUTCMonth() && date1.getUTCFullYear() === date2.getUTCFullYear()){
 	console.log('Dates are same');
 } else {
 	console.log('Dates are not same');
 }
+```
 2. Consult Question 2
 =========================================================================================================
 Question 6: How to convert UTC date time into local date time using JavaScript ?
@@ -137,26 +142,24 @@ Answer: In this approach, we will change the DateTime format by only using nativ
 we will apply modulo “%” operator to find the hour in 12-hour format and use conditional “?:” operator to apply “AM” or “PM”.
 
 ========================================================================================================
-Question 14: JavaScript | Get the start and end of the day in UTC
+### Question 14: JavaScript | Get the start and end of the day in UTC
 =========================================================================================================
-Anser: 
-var startDay = new Date();
+### Anser
+```bash var startDay = new Date();
 startDay.setHours(0,0,0,0); // Sun Jun 28 2020 00:00:00 GMT+0800 (China Standard Time)
 var endDay = new Date();
 endDay.setHours(23,59,59,999); // Sun Jun 28 2020 23:59:59 GMT+0800 (China Standard Time)
-========================================================================================================
-Question 15: How to get the first day of the year in JavaScript ?
-=========================================================================================================
-Answer: 
-var date = new Date();
-var firstDayOfYear = new Date(date.getFullYear(), 0,1); //Wed Jan 01 2020 00:00:00 GMT+0800 (China Standard Time)
+```
 
-========================================================================================================
-Question 16: How to get the first and last date of current month using JavaScript ?
-=========================================================================================================
-Answer:
-var date = new Date(); 
-                  
-var firstDay =  new Date(date.getFullYear(), date.getMonth(), 1); 
-	  
+### Question 15: How to get the first day of the year in JavaScript ?
+### Answer
+```bash var date = new Date();
+var firstDayOfYear = new Date(date.getFullYear(), 0,1); //Wed Jan 01 2020 00:00:00 GMT+0800 (China Standard Time)
+```
+### Question 16: How to get the first and last date of current month using JavaScript ?
+### Answer
+```bash
+var date = new Date();                   
+var firstDay =  new Date(date.getFullYear(), date.getMonth(), 1); 	  
 var lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0); // 0 means last day of the month
+```
