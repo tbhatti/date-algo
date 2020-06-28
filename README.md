@@ -42,7 +42,8 @@ var seconds = ms/1000; // It will convert milliseconds to seconds
 ### Question 4: Get the relative timestamp difference between dates in JavaScript
 ### Answer
 
-```bash Please have a look at https://github.com/tbhatti/date-algo/blob/master/days-ago.js
+```bash 
+Please have a look at https://github.com/tbhatti/date-algo/blob/master/days-ago.js
 ```
 
 
@@ -50,7 +51,8 @@ var seconds = ms/1000; // It will convert milliseconds to seconds
 ### Answer
 There are two ways to do this
 1. by comparing UTCDate, UTCMonth and UTCFullYear as follows
-```bash var date1 = new Date('2020-06-27');
+```bash 
+var date1 = new Date('2020-06-27');
 var date2 = new Date('2020-06-26');
 if(date1.getUTCDate() === date2.getUTCDate() && date1.getUTCMonth() === date2.getUTCMonth() && date1.getUTCFullYear() === date2.getUTCFullYear()){
 	console.log('Dates are same');
@@ -101,12 +103,13 @@ Sun: 0
 ```bash
 let date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0)); 
 console.log('Given IST datetime: ' + date); 
-date.toLocaleString("en-US", {timeZone: "America/New_York"});
-```			
+date.toLocaleString("en-US", {timeZone: "America/New_York"})
+```
 
 ### Question 10: How to check if date is less than 1 hour ago using JavaScript ?
 
 ### Answer
+```bash
 var date = new Date("2020-06-27 16:10:10");
 var now = new Date();
 var diffInMS = now - date;
@@ -116,20 +119,22 @@ if (diffInMS/msInHour > 1) {
 } else {
 	console.log('Not in the hour');
 }
-			
-=========================================================================================================
-Question 11: How to check a date is valid or not using JavaScript ?
-=========================================================================================================		
-Answer: If the date is valid then the getTime() will always be equal to itself.
+```
+### Question 11: How to check a date is valid or not using JavaScript ?
+
+###Answer
+If the date is valid then the getTime() will always be equal to itself.
+```bash
 var date = new Date('2019-12-12');
 if(date.getTime() === date.getTime()) {
 	console.log('Date is valid');
 } else {
 	console.log(''Date is invalid);
 }
-=========================================================================================================
-Question 12: How to convert seconds to time string format hh:mm:ss using JavaScript ?
-=========================================================================================================	
+```
+### Question 12: How to convert seconds to time string format hh:mm:ss using JavaScript ?
+### Answer
+```bash
 var dateObj = new Date(66666666 * 1000);
 hours = dateObj.getUTCHours();
 minutes = dateObj.getUTCMinutes();
@@ -138,11 +143,11 @@ seconds = dateObj.getSeconds();
 timeString = hours.toString().slice(-2) + ':' + 
     minutes.toString().slice(-2) + ':' + 
     seconds.toString().slice(-2)
-	
-=========================================================================================================
-Question 13: How do you display JavaScript datetime in 12 hour AM/PM format?
-=========================================================================================================
-Answer: In this approach, we will change the DateTime format by only using native methods. Simply put, 
+```
+
+### Question 13: How do you display JavaScript datetime in 12 hour AM/PM format?
+### Answer
+In this approach, we will change the DateTime format by only using native methods. Simply put, 
 we will apply modulo “%” operator to find the hour in 12-hour format and use conditional “?:” operator to apply “AM” or “PM”.
 
 ========================================================================================================
