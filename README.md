@@ -54,7 +54,8 @@ There are two ways to do this
 ```bash 
 var date1 = new Date('2020-06-27');
 var date2 = new Date('2020-06-26');
-if(date1.getUTCDate() === date2.getUTCDate() && date1.getUTCMonth() === date2.getUTCMonth() && date1.getUTCFullYear() === date2.getUTCFullYear()){
+if(date1.getUTCDate() === date2.getUTCDate() && date1.getUTCMonth() === date2.getUTCMonth() 
+&& date1.getUTCFullYear() === date2.getUTCFullYear()){
 	console.log('Dates are same');
 } else {
 	console.log('Dates are not same');
@@ -147,12 +148,13 @@ timeString = hours.toString().slice(-2) + ':' +
 
 ### Question 13: How do you display JavaScript datetime in 12 hour AM/PM format?
 ### Answer
+```bash
 In this approach, we will change the DateTime format by only using native methods. Simply put, 
 we will apply modulo “%” operator to find the hour in 12-hour format and use conditional “?:” operator to apply “AM” or “PM”.
+```
 
-========================================================================================================
 ### Question 14: JavaScript | Get the start and end of the day in UTC
-=========================================================================================================
+
 ### Anser
 ```bash var startDay = new Date();
 startDay.setHours(0,0,0,0); // Sun Jun 28 2020 00:00:00 GMT+0800 (China Standard Time)
