@@ -1,26 +1,30 @@
 function calculateAnagrams(str) {
 const wordsArray = str.split(" ");
-var nonRepWordsArray = wordsArray.reduce((acc,currentWord) => {
-  if(acc.indexOf(currentWord) < 0) acc.push(currentWord);
-  return acc;
-},[]);
+var panagramsList = [];
+var nonRepWordsArray = findUniqueWord(wordsArray)
 
-let length = nonRepWordsArray.length;
-nonRepWordsArray[length] = "";
-let matched = false; // if string has car, acr and arc then it should 
-let counter = 0;
-nonRepWordsArray.forEach((element, index) => {
-   matched = false;
-  for (let j = index+1; j< length; j++) {
+let length = nonRepWordsArray.length; // length of nonRepWordsArray
+nonRepWordsArray[length] = ""; // To get next element from array
+nonRepWordsArray.forEach((element, index) => {  
+  for (let j = index + 1; j< length; j++) {// fron 1 to length of the nonRepWordsArray
     let nextElem = nonRepWordsArray[j];
-    if(!matched && element.split('').sort().join('') === nextElem.split('').sort().join('')) {
-      counter++;
-      matched = true;
+    // Check "car" and "arc" are same
+    if(element.split('').sort().join('') === nextElem.split('').sort().join('')) {
+      panagramsList.push(element.split('').sort().join(''));
    }
   }
 });
- return counter;
+ return findUniqueWord(panagramsList).length;
 
 
 }
-console.log('Number of Anagrams = ',calculateAnagrams("I arc have a car and acr ")); // kmno konm bcb bbc dlel dell I arc have a car and acr  aa aa odg dog gdo
+/***Filter unique words from array of words and return list of words */
+function findUniqueWord(wordsArray) {
+  let unique = wordsArray.reduce((acc,currentWord) => {
+  if(acc.indexOf(currentWord) < 0) acc.push(currentWord);
+  return acc;
+},[]);
+return unique;
+}
+
+console.log('Number of Anagrams = ',calculateAnagrams("are final rea plery fianl era reply rpley fanil filan")); // kmno konm bcb bbc dlel dell I arc have a car and acr  aa aa odg dog gdo
