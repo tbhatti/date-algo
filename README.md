@@ -186,6 +186,12 @@ function multiply(a, b, c) {
 function add(a, b, c) {
     return a+b+c;
 }
+// Let's pass a function func as input.
+// So to get the curried version of func, first thing we should do is return a function which takes arguments. In our case we are returning curried.
+// Now in curried we need to check the length of arguments that are passed to it. If all the arguments are passed we call func else we need to again return a function to get the remaining arguments and so on until all the arguments are passed.
+// So we can see a recursive behavior here. So how do we achieve this?
+// We call curried recursively until all the arguments are received.
+
 function curry(func) {
     function curried(...args) {
         if(args.length >= func.length) {
