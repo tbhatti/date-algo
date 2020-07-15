@@ -307,4 +307,25 @@ function plusMinusRatioToFivePrecision(array) {
 var array = [-4,3 ,-9, 0, 4, 1];
 plusMinusRatioToFivePrecision(array);
 ```
+### Question 22: Print left and right staircase using ?
+### Answer
+bash```
+function leftStaircase(n) {
+ var line = Array(n + 1).fill(' ');
+  for (var i = n - 1; i >= 0; i--) {
+    line[i] = '#';
+   console.log(line.join(''));
+  } 
+}
 
+function rightStaircase(n) {
+ var line = Array(n + 1).fill(' ');
+  for (var i = 0; i < n; i++) {
+    line[i] = '#';
+   console.log(line.join(''));
+  } 
+}
+
+rightStaircase(6)
+leftStaircase(6)
+```
