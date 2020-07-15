@@ -242,3 +242,21 @@ let result = getUniqueValue([1,2,3,1,2,3,5,4,5]);
 console.log(getKeyByValue(result,1));
 ```
 
+### Question 19: Compare triplets?
+### Answer
+
+```bash 
+function compareTriplets(a, b) {
+
+    let alice = (a[0]>b[0] ? 1 : 0) + (a[1]>b[1] ? 1 : 0) + (a[2]>b[2] ? 1 : 0)
+    let bob = (a[0]<b[0] ? 1 : 0) + (a[1]<b[1] ? 1 : 0) + (a[2]<b[2] ?  1 : 0)
+    return [alice, bob];
+}
+
+let result = compareTriplets([5,8,7], [3,6,10]);
+
+console.log(result.join( ' '));
+
+
+```
+
