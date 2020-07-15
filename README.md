@@ -309,7 +309,7 @@ plusMinusRatioToFivePrecision(array);
 ```
 ### Question 22: Print left and right staircase using ?
 ### Answer
-bash```
+```bash
 
 function leftStaircase(n) {
  var line = Array(n + 1).fill(' ');
