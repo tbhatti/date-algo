@@ -281,4 +281,30 @@ var array = [
 ];
 diagonalSum(array);
 ```
+### Question 21: Ratio of positive, negative and zeros in an array
+### Answer
+
+```bash
+function plusMinusRatioToFivePrecision(array) {
+  let posNumArray = array.filter((elem, index) => {
+    return elem > 0;
+  });
+  let negNumArray = array.filter((elem, index) => {
+    return elem < 0;
+  });
+  let zeroNumArray = array.filter((elem, index) => {
+    return elem === 0;
+  });
+  let posRatio = (posNumArray.length/array.length).toFixed(5);
+  let negRatio = (negNumArray.length/array.length).toPrecision(5);
+  let zeroRatio = (zeroNumArray.length/array.length).toPrecision(5);
+
+  console.log(posRatio);
+  console.log(negRatio);
+  console.log(zeroRatio);
+}
+
+var array = [-4,3 ,-9, 0, 4, 1];
+plusMinusRatioToFivePrecision(array);
+```
 
