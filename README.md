@@ -252,11 +252,33 @@ function compareTriplets(a, b) {
     let bob = (a[0]<b[0] ? 1 : 0) + (a[1]<b[1] ? 1 : 0) + (a[2]<b[2] ?  1 : 0)
     return [alice, bob];
 }
-
 let result = compareTriplets([5,8,7], [3,6,10]);
-
 console.log(result.join( ' '));
+```
+### Question 20: Diagonal Sum/Difference
+### Answer
+```bash
+function diagonalSum(array) {
+  let n = array.length;
+  let leftDig = 0;
+  let rightDiag = 0;
+  for(let i =0; i < n; i++) {
+    for (let j = 0; j <n; j++) {
+      if(i===j) {
+        leftDig += array[i][j];
+      } if(i === n-j-1) {
+        rightDiag += array[i][j];
+      }
+    }
+  }
+ return Math.abs(rightDiag-leftDig);
+}
 
-
+var array = [
+  [1, 2, 3],
+  [3, 4, 5],
+  [1, 6, 7]
+];
+diagonalSum(array);
 ```
 
