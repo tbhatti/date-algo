@@ -221,13 +221,24 @@ console.log(curriedAdd(5)(6,7)); // 210
 ### Question 18: Counting the occurrences / frequency of array elements?
 ### Answer
 ```bash 
-var a = [1,2,3,1,2,3,5,4,5].reduce(function (acc, curr) {
-  if (typeof acc[curr] === 'undefined') {
-    acc[curr] = 1;
-  } else {
-    acc[curr] += 1;
-  }
-console.log(acc)
-  return acc; 
-}, {});
+function getUniqueValue (arr) {
+ let finalObject =  arr.reduce(function (acc, curr) {
+    if (typeof acc[curr] === 'undefined') {
+      acc[curr] = 1;
+    } else {
+      acc[curr] += 1;
+    }
+
+    return acc;
+  }, {});
+  return finalObject;
+}
+
+function getKeyByValue(object, value) {
+  return Object.keys(object).find(key => object[key] === value);
+}
+
+let result = getUniqueValue([1,2,3,1,2,3,5,4,5]);
+console.log(getKeyByValue(result,1));
 ```
+
