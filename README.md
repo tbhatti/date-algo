@@ -373,3 +373,25 @@ function timeConversion(s) {
 
 timeConversion("07:23:01 PM")
 ```
+
+### Question 25: Grading Students: Every student receives a  in the inclusive range from  to .
+### Any  less than  is a failing grade.
+### Sam is a professor at the university and likes to round each student's  according to these rules:
+### If the difference between the  and the next multiple of  is less than , round  up to the next multiple of 
+
+### Answer
+```bash
+function gradingStudents(grades) {
+     grades.forEach((element, index) => {
+      let nextMultipleOfFive = element + ((5-(element % 5)) % 5);
+      if( nextMultipleOfFive - element < 3 && nextMultipleOfFive >= 40) {
+        grades[index] = nextMultipleOfFive;
+      } });
+
+      return grades;
+
+}
+
+let grades = gradingStudents([73,67,38,33])
+console.log(grades);
+```
