@@ -331,3 +331,32 @@ rightStaircase(6)
 leftStaircase(6)
 
 ```
+### Question 23: Mini-Max Sum ? Given array = [10,1,2,4,6,7,9] minSum = 29 and Max Sum = 38
+
+### Answer
+```bash
+function findMaxMin(arr) {
+  
+    let maxArray = arr.slice();
+    let minArray = arr.slice();
+
+    const minIndex = arr.indexOf(Math.min(...arr));
+    const maxIndex = arr.indexOf(Math.max(...arr));
+    maxArray.splice(minIndex, 1);
+    minArray.splice(maxIndex, 1);
+    
+
+  let minResult = minArray.reduce((acc, cur) => {
+    return acc+cur;
+  }, 0);
+  let maxResult = maxArray.reduce((acc, cur) => {
+    return acc+cur;
+  }, 0);
+  
+  console.log(minResult + ' '+ maxResult);
+
+}
+
+
+findMaxMin([10,1,2,4,6,7,9])
+```
