@@ -360,3 +360,16 @@ function findMaxMin(arr) {
 
 findMaxMin([10,1,2,4,6,7,9])
 ```
+### Question 24: Convert12 hours time to 24 hours time,  10:18:39 PM to 22:18:39
+
+### Answer
+```bash
+function timeConversion(s) {  
+	var time = s.match(/\d{2}/g);
+	if (time[0] === "12") time[0] = "00";
+	if (s.indexOf("PM") > -1) time[0] = Number(time[0])+12;
+	console.log(time.join(":"));
+}
+
+timeConversion("07:23:01 PM")
+```
