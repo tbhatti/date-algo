@@ -1,9 +1,9 @@
 ## JavaScript Date questions
 
 #### Question 1: Check the given date is between two given dates? 
-_var date1 = new Date('2020-01-01'); // First given date_ \
-_var date2 = new Date('2020-07-20'); // Second given date_ \
-_var date3 = new Date('2020-04-02'); // To check whether date is beteen date 1 and date2_
+_var date1 = new Date('2020-01-01'); \
+_var date2 = new Date('2020-07-20'); \
+_var date3 = new Date('2020-04-02');_
 ##### Answer 
 ```bash 
 <!-- date.getTime() will return  milliseconds since Jan 1, 1970, 00:00:00.000 GMT -->
