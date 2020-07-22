@@ -1,4 +1,4 @@
-# JavaScript Date questions
+#### JavaScript Date questions
 
 - [x] Question 1: Check the given date is between two given dates? \
 var date1 = new Date('2020-01-01'); // First given date \
@@ -14,9 +14,9 @@ if (date3.getTime() > date1.getTime() && date3.getTime() < date2.getTime()) {
 }
 ```
 
-### Question 2: How to check the input date is equal to today’s date or not using JavaScript ?
+- [x] Question 2: How to check the input date is equal to today’s date or not using JavaScript ?
 
-### Answer 
+##### Answer 
 There are two ways to check whether given date is today's date
 1. By sttng hours to 0 0 0 0
 
@@ -30,9 +30,9 @@ if(today.setHours(0,0,0,0) === givenDate.setHours(0,0,0,0)) {
 } 
 ```
 
-### Question 3: How to get seconds since epoch in JavaScript?
+- [x]  Question 3: How to get seconds since epoch in JavaScript?
 
-### Answer
+##### Answer
 EPOCH means time from 01 January 1970
 
 ```bash var date = new Date();
@@ -40,16 +40,16 @@ var ms = date.getTime() // It will return the number of milliseconds from 01 Jau
 var seconds = ms/1000; // It will convert milliseconds to seconds
 ```
 
-### Question 4: Get the relative timestamp difference between dates in JavaScript
-### Answer
+- [x]  Question 4: Get the relative timestamp difference between dates in JavaScript
+##### Answer
 
 ```bash 
 Please have a look at https://github.com/tbhatti/date-algo/blob/master/days-ago.js
 ```
 
 
-### Question 5: How to check for two timestamp for the same day?
-### Answer
+- [x] Question 5: How to check for two timestamp for the same day?
+##### Answer
 There are two ways to do this
 1. by comparing UTCDate, UTCMonth and UTCFullYear as follows
 ```bash 
@@ -64,15 +64,15 @@ if(date1.getUTCDate() === date2.getUTCDate() && date1.getUTCMonth() === date2.ge
 ```
 2. Consult Question 2
 
-### Question 6: How to convert UTC date time into local date time using JavaScript ?
-### Answer
+- [x] Question 6: How to convert UTC date time into local date time using JavaScript ?
+##### Answer
 ```bash 
 var theDate = new Date(Date.parse('06/14/2020 4:41:48 PM UTC'))
 theDate.toLocaleString()
 ```
 
-### Question 7: How to check if the given date is weekend?
-### Answer
+- [x] Question 7: How to check if the given date is weekend?
+##### Answer
 ```bash
 Use .getDay() method on the Date object to get the day.
 Check if it is 6 or not (6 denotes Saturday).
