@@ -1,6 +1,6 @@
 # JavaScript Date questions
 
-### Question 1: Check the given date is between two given dates?
+- [x] Question 1: Check the given date is between two given dates?
 var date1 = new Date('2020-01-01'); // First given date
 var date2 = new Date('2020-07-20'); // Second given date
 var date3 = new Date('2020-04-02'); // To check whether date is beteen date 1 and date2
