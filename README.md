@@ -13,6 +13,17 @@ if (date3.getTime() > date1.getTime() && date3.getTime() < date2.getTime()) {
 	console.log('Given date is not in between');
 }
 ```
+```bash
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.myRef = React.createRef();
+  }
+  render() {
+    return <div ref={this.myRef} />;
+  }
+}
+```
 
 #### Question 2: How to check the input date is equal to today’s date or not using JavaScript ? 
 
